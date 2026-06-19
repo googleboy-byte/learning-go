@@ -4,6 +4,7 @@
 
 - Concept 1: Types, Variables, Control Flow
 - Concept 2: String Manipulation
+- Concept 3: if, else-if, switch case (with fallthrough), defer
 
 ### Code Snippet of the Week
 
@@ -27,6 +28,12 @@ const (
 fmt.Println("Monday", Monday)
 fmt.Println("Tuesday", Tuesday)
 fmt.Println("Wednesday", Wednesday)
+```
+
+```go
+// deferred execution
+	defer fmt.Println("hello") // this will execute at the end of the function
+	fmt.Println("world")
 ```
 
 ### Challenges & Solutions

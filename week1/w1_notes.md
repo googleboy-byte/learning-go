@@ -5,6 +5,8 @@
 - Concept 1: Types, Variables, Control Flow
 - Concept 2: String Manipulation
 - Concept 3: if, else-if, switch case (with fallthrough), defer
+- Concept 4: Command Line Arguments, type conversion (str to int)
+- Concept 5: package, import, go get
 
 ### Code Snippet of the Week
 
@@ -36,15 +38,30 @@ fmt.Println("Wednesday", Wednesday)
 	fmt.Println("world")
 ```
 
+```go
+cli_expression := os.Args[1]
+
+expression, err := govaluate.NewEvaluableExpression(cli_expression)
+if err != nil {
+    fmt.Println("Error: Invalid expression", err)
+    return
+}
+
+result, err := expression.Evaluate(nil)
+```
+
 ### Challenges & Solutions
 
-- Challenge: [Describe a problem you encountered]
-- Solution: [How you solved it]
+- Challenge: [string to int conversion for cli args]
+- Solution: [strconv.Atoi]
+
+- Challenge: [evaluate formula from cli args]
+- Solution: [govaluate]
 
 ### Resources Used
 
-- [Link to helpful resource]
-- [Another helpful resource]
+- [string to int conversion for cli args](https://stackoverflow.com/questions/4278430/convert-string-to-integer-type-in-go)
+- [how to evaluate a formula in go](https://stackoverflow.com/questions/23923383/evaluate-formula-in-go)
 
 ### Next Week's Focus
 
